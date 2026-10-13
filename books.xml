@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE bookstore SYSTEM "books.dtd">
+
+<bookstore>
+
+    <book id="b1">
+        <title>Introduction to Python</title>
+        <author>John Smith</author>
+        <price>499</price>
+        <year>2025</year>
+    </book>
+
+    <book id="b2">
+        <title>Web Programming</title>
+        <author>Robert Brown</author>
+        <price>599</price>
+        <year>2026</year>
+    </book>
+
+    <book id="b3">
+        <title>Artificial Intelligence</title>
+        <author>David Wilson</author>
+        <price>799</price>
+        <year>2026</year>
+    </book>
+
+</bookstore>

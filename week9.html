@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Week 9 - JSON Parsing</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f8ff;
+margin:0;
+}
+
+.container{
+max-width:800px;
+margin:60px auto;
+padding:35px;
+background:white;
+border-radius:12px;
+box-shadow:0 4px 15px #0002;
+text-align:center;
+}
+
+.student{
+margin:15px 0;
+padding:20px;
+background:#eff6ff;
+border-radius:8px;
+text-align:left;
+}
+
+button{
+padding:12px 25px;
+background:#2563eb;
+color:white;
+border:0;
+border-radius:7px;
+font-size:16px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>EduSphere</h1>
+
+<h2>Week 9 - JSON Parsing</h2>
+
+<p>Fetch and parse JSON data asynchronously.</p>
+
+<button onclick="loadJSON()">
+Load JSON Data
+</button>
+
+<div id="output"></div>
+
+</div>
+
+<script>
+
+function loadJSON(){
+
+fetch("students.json")
+
+.then(response => {
+
+if(!response.ok){
+throw new Error("Unable to load JSON file");
+}
+
+return response.json();
+
+})
+
+.then(data => {
+
+let output="";
+
+data.forEach(student => {
+
+output += `
+<div class="student">
+
+<h3>${student.name}</h3>
+
+<p>Email: ${student.email}</p>
+
+<p>Course: ${student.course}</p>
+
+</div>
+`;
+
+});
+
+document.getElementById("output").innerHTML=output;
+
+})
+
+.catch(error => {
+
+document.getElementById("output").textContent=
+"Error: " + error.message;
+
+});
+
+}
+
+</script>
+
+</body>
+
+</html>

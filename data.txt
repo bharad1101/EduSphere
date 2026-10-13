@@ -1,0 +1,12 @@
+Welcome to EduSphere!
+
+EduSphere is an online learning platform.
+
+Available courses:
+1. Web Programming
+2. Python Programming
+3. Artificial Intelligence
+4. Data Science
+
+This information has been loaded asynchronously
+using the JavaScript Fetch API.

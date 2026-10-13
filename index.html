@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduSphere - Online Learning Platform</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.hero{padding:70px 6%;display:flex;align-items:center;gap:50px}
+.hero-text{flex:1}
+.learning{flex:1;padding:35px;background:white;border-radius:15px;
+box-shadow:0 5px 20px #0002}
+.tag{display:inline-block;padding:7px 12px;background:#dbeafe;
+color:#1d4ed8;border-radius:20px;font-size:13px}
+.hero h2{font-size:42px;color:#172554}
+.mini{display:flex;gap:15px;margin-top:25px}
+.mini div{flex:1;padding:20px;background:#eff6ff;border-radius:10px}
+section{padding:55px 6%;text-align:center}
+#courses{background:#eff6ff}
+.course{padding:25px;background:white;border-radius:12px;
+box-shadow:0 3px 12px #0001}
+.course-icon{font-size:40px;width:70px;height:70px;padding:12px;
+border-radius:50%;margin:auto}
+.content{max-width:800px;margin:auto}
+.cta{padding:55px 6%;text-align:center;background:#2563eb;color:white}
+
+@media(max-width:800px){
+.hero{flex-direction:column}
+.hero-text,.learning{width:100%}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2 class="logo">EduSphere</h2>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="#features">Features</a>
+<a href="catalogue.html">Courses</a>
+<a href="#about">About</a>
+<a href="login.html" class="blue">Login</a>
+<a href="register.html" class="btn primary">Register</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<span class="tag">LEARN • GROW • SUCCEED</span>
+
+<h2>Start Learning <span style="color:#2563eb;">Today</span></h2>
+
+<p class="desc">
+Learn new skills, improve your knowledge and build a successful
+future with EduSphere.
+</p>
+
+<a href="catalogue.html" class="btn primary">Get Started</a>
+<a href="#features" class="btn outline">Learn More</a>
+
+</div>
+
+<div class="learning">
+
+<h2>Learn Without Limits</h2>
+
+<p class="desc">
+Access quality courses and learn from anywhere, anytime.
+</p>
+
+<div class="mini">
+
+<div>
+<h3>💻 Web Programming</h3>
+<p>Build modern websites.</p>
+</div>
+
+<div>
+<h3>🤖 Artificial Intelligence</h3>
+<p>Explore the world of AI.</p>
+</div>
+
+</div>
+</div>
+
+</section>
+
+<section id="features">
+
+<h2 class="blue">Why Choose EduSphere?</h2>
+
+<p class="desc">
+Everything you need to make your learning journey successful.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">📚</div>
+<h3>Quality Courses</h3>
+<p class="desc">Learn through well-designed and practical courses.</p>
+</div>
+
+<div class="card">
+<div class="icon">👨‍🏫</div>
+<h3>Expert Trainers</h3>
+<p class="desc">Learn from experienced and knowledgeable trainers.</p>
+</div>
+
+<div class="card">
+<div class="icon">⏰</div>
+<h3>Flexible Learning</h3>
+<p class="desc">Learn at your own pace from anywhere.</p>
+</div>
+
+<div class="card">
+<div class="icon">🏆</div>
+<h3>Certificates</h3>
+<p class="desc">Earn certificates after completing courses.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="courses">
+
+<h2 class="blue">Popular Courses</h2>
+
+<p class="desc">
+Choose from our popular courses and start learning today.
+</p>
+
+<div class="cards">
+
+<div class="course">
+<div class="course-icon" style="background:#bfdbfe;">💻</div>
+<h3>Web Development</h3>
+<p class="desc">
+Learn HTML, CSS and JavaScript to create modern websites.
+</p>
+</div>
+
+<div class="course">
+<div class="course-icon" style="background:#fde68a;">🐍</div>
+<h3>Python Programming</h3>
+<p class="desc">
+Learn Python programming from basics to advanced concepts.
+</p>
+</div>
+
+<div class="course">
+<div class="course-icon" style="background:#ddd6fe;">🤖</div>
+<h3>Artificial Intelligence</h3>
+<p class="desc">
+Understand AI and explore intelligent technologies.
+</p>
+</div>
+
+</div>
+
+<div style="margin-top:30px;">
+<a href="catalogue.html" class="btn primary">
+View Full Catalogue
+</a>
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="content">
+
+<h2 class="blue">About EduSphere</h2>
+
+<p class="desc">
+EduSphere is an online learning platform designed to help students
+develop technical skills through simple, practical and flexible
+learning resources.
+</p>
+
+<p class="desc">
+Our goal is to make quality education accessible to everyone and
+help learners build the skills required for their future careers.
+</p>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2>Ready to Start Learning?</h2>
+
+<p>
+Join EduSphere today and take the first step towards your future.
+</p>
+
+<a href="register.html"
+class="btn"
+style="background:white;color:#2563eb;">
+Register Now
+</a>
+
+</section>
+
+<footer>
+
+<h3>EduSphere</h3>
+<p>Learn Today. Build Tomorrow.</p>
+
+<a href="index.html">Home</a>
+<a href="catalogue.html">Catalogue</a>
+<a href="login.html">Login</a>
+<a href="register.html">Register</a>
+
+<p>© 2026 EduSphere. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>

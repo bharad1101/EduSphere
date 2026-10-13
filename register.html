@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduSphere - Student Registration</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.left{width:45%}
+.right{width:55%}
+.left h2{font-size:42px}
+.left p{color:#dbeafe;line-height:1.7}
+.box{width:480px}
+.gender{display:flex;gap:20px;margin:8px 0 15px}
+.gender label{margin:0;font-weight:normal}
+.terms{display:flex;gap:8px;align-items:center;margin:18px 0}
+.terms label{margin:0;font-weight:normal}
+.login-link{text-align:center;margin-top:15px}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<div class="left">
+
+<h1>EduSphere</h1>
+
+<h2>Join EduSphere</h2>
+
+<p>
+Start your learning journey today and build the skills
+you need for your future.
+</p>
+
+<ul>
+<li>Access quality courses</li>
+<li>Learn from expert trainers</li>
+<li>Learn at your own pace</li>
+<li>Earn certificates</li>
+</ul>
+
+</div>
+
+<div class="right">
+
+<div class="box">
+
+<a href="index.html" class="blue"
+style="font-weight:bold;">
+← Back to Home
+</a>
+
+<h2 style="color:#172554;font-size:36px;">
+Student Registration
+</h2>
+
+<p class="desc">
+Create your account and start learning.
+</p>
+
+<form id="registrationForm"
+action="login.html"
+onsubmit="return validateForm()">
+
+<label for="name">Full Name</label>
+
+<input type="text"
+id="name"
+placeholder="Enter your full name">
+
+<label for="email">Email</label>
+
+<input type="text"
+id="email"
+placeholder="Enter your email address">
+
+<label for="phone">Phone Number</label>
+
+<input type="text"
+id="phone"
+placeholder="Enter your 10-digit phone number">
+
+<label for="dob">Date of Birth</label>
+
+<input type="date" id="dob">
+
+<label>Gender</label>
+
+<div class="gender">
+
+<label>
+<input type="radio" name="gender" value="Male">
+Male
+</label>
+
+<label>
+<input type="radio" name="gender" value="Female">
+Female
+</label>
+
+<label>
+<input type="radio" name="gender" value="Other">
+Other
+</label>
+
+</div>
+
+<label for="course">Select Course</label>
+
+<select id="course">
+
+<option value="">Select a course</option>
+<option>Web Programming</option>
+<option>Python Programming</option>
+<option>Artificial Intelligence</option>
+<option>Data Science</option>
+
+</select>
+
+<label for="password">Password</label>
+
+<input type="password"
+id="password"
+placeholder="Create a password">
+
+<label for="confirm">Confirm Password</label>
+
+<input type="password"
+id="confirm"
+placeholder="Re-enter your password">
+
+<div class="terms">
+
+<input type="checkbox" id="terms">
+
+<label for="terms">
+I agree to the Terms and Conditions
+</label>
+
+</div>
+
+<button type="submit">
+Register
+</button>
+
+<p class="login-link">
+Already have an account?
+<a href="login.html" class="blue">
+Login
+</a>
+</p>
+
+</form>
+
+</div>
+</div>
+</div>
+
+<script>
+
+function validateForm(){
+
+let name=document.getElementById("name")
+.value.trim();
+
+let email=document.getElementById("email")
+.value.trim();
+
+let phone=document.getElementById("phone")
+.value.trim();
+
+let dob=document.getElementById("dob").value;
+
+let course=document.getElementById("course").value;
+
+let password=document.getElementById("password")
+.value;
+
+let confirm=document.getElementById("confirm")
+.value;
+
+let terms=document.getElementById("terms").checked;
+
+let gender=document.querySelector(
+'input[name="gender"]:checked'
+);
+
+if(name===""){
+
+alert("Please enter your full name.");
+return false;
+
+}
+
+if(!/^[A-Za-z ]+$/.test(name)){
+
+alert("Name should contain only letters and spaces.");
+return false;
+
+}
+
+if(email==="" ||
+!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+
+alert("Please enter a valid email address.");
+return false;
+
+}
+
+if(!/^[0-9]{10}$/.test(phone)){
+
+alert("Phone number must contain exactly 10 digits.");
+return false;
+
+}
+
+if(dob===""){
+
+alert("Please select your date of birth.");
+return false;
+
+}
+
+if(!gender){
+
+alert("Please select your gender.");
+return false;
+
+}
+
+if(course===""){
+
+alert("Please select a course.");
+return false;
+
+}
+
+if(password.length<6){
+
+alert("Password must contain at least 6 characters.");
+return false;
+
+}
+
+if(password!==confirm){
+
+alert("Passwords do not match.");
+return false;
+
+}
+
+if(!terms){
+
+alert("Please accept the Terms and Conditions.");
+return false;
+
+}
+
+alert("Registration successful!");
+
+return true;
+
+}
+
+</script>
+
+</body>
+</html>
+

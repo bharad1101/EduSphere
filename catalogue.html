@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduSphere - Course Catalogue</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.catalogue{text-align:center;padding:45px 6%}
+.catalogue h1{color:#172554;font-size:38px}
+.search{max-width:500px;margin:20px auto}
+.filter{margin:25px 0}
+.filter button{width:auto;margin:5px;padding:10px 20px}
+.course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.course-card{background:white;padding:25px;border-radius:12px;
+box-shadow:0 4px 15px #0002;text-align:left}
+.course-card h2{color:#1e3a8a}
+.course-card p{color:#6b7280;line-height:1.6}
+.course-card .price{font-size:20px;font-weight:bold;color:#2563eb}
+.course-card button{margin-top:12px}
+.hide{display:none}
+
+@media(max-width:800px){
+.course-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h2 class="logo">EduSphere</h2>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="index.html#features">Features</a>
+<a href="catalogue.html" class="blue">Catalogue</a>
+<a href="index.html#about">About</a>
+<a href="login.html" class="blue">Login</a>
+<a href="register.html" class="btn primary">Register</a>
+</nav>
+
+</header>
+
+<section class="catalogue">
+
+<h1>Course Catalogue</h1>
+
+<p class="desc">
+Explore our courses and choose the right one for your learning journey.
+</p>
+
+<div class="search">
+
+<input type="text"
+id="searchBox"
+placeholder="Search for a course..."
+onkeyup="searchCourses()">
+
+</div>
+
+<div class="filter">
+
+<button onclick="filterCourses('all')">
+All Courses
+</button>
+
+<button onclick="filterCourses('programming')">
+Programming
+</button>
+
+<button onclick="filterCourses('ai')">
+AI & Data
+</button>
+
+</div>
+
+<div class="course-grid">
+
+<div class="course-card programming">
+
+<div class="icon">💻</div>
+
+<h2>Web Programming</h2>
+
+<p>
+Learn HTML, CSS, JavaScript and build modern websites.
+</p>
+
+<p class="price">₹999</p>
+
+<button onclick="enroll('Web Programming')">
+Enroll Now
+</button>
+
+</div>
+
+<div class="course-card programming">
+
+<div class="icon">🐍</div>
+
+<h2>Python Programming</h2>
+
+<p>
+Learn Python from basics to advanced programming concepts.
+</p>
+
+<p class="price">₹1,199</p>
+
+<button onclick="enroll('Python Programming')">
+Enroll Now
+</button>
+
+</div>
+
+<div class="course-card ai">
+
+<div class="icon">🤖</div>
+
+<h2>Artificial Intelligence</h2>
+
+<p>
+Understand AI concepts, machine learning and intelligent systems.
+</p>
+
+<p class="price">₹1,499</p>
+
+<button onclick="enroll('Artificial Intelligence')">
+Enroll Now
+</button>
+
+</div>
+
+<div class="course-card ai">
+
+<div class="icon">📊</div>
+
+<h2>Data Science</h2>
+
+<p>
+Learn data analysis, visualization and basic machine learning.
+</p>
+
+<p class="price">₹1,399</p>
+
+<button onclick="enroll('Data Science')">
+Enroll Now
+</button>
+
+</div>
+
+<div class="course-card programming">
+
+<div class="icon">⚙️</div>
+
+<h2>C Programming</h2>
+
+<p>
+Build strong programming fundamentals using the C language.
+</p>
+
+<p class="price">₹799</p>
+
+<button onclick="enroll('C Programming')">
+Enroll Now
+</button>
+
+</div>
+
+<div class="course-card ai">
+
+<div class="icon">🧠</div>
+
+<h2>Machine Learning</h2>
+
+<p>
+Learn machine learning algorithms and practical applications.
+</p>
+
+<p class="price">₹1,599</p>
+
+<button onclick="enroll('Machine Learning')">
+Enroll Now
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>EduSphere</h3>
+<p>Learn Today. Build Tomorrow.</p>
+
+<a href="index.html">Home</a>
+<a href="login.html">Login</a>
+<a href="register.html">Register</a>
+
+<p>© 2026 EduSphere. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+function searchCourses(){
+
+let text=document.getElementById("searchBox")
+.value.toLowerCase();
+
+let courses=document.getElementsByClassName("course-card");
+
+for(let course of courses){
+
+let name=course.querySelector("h2")
+.innerText.toLowerCase();
+
+if(name.includes(text)){
+course.classList.remove("hide");
+}
+else{
+course.classList.add("hide");
+}
+
+}
+}
+
+function filterCourses(category){
+
+let courses=document.getElementsByClassName("course-card");
+
+for(let course of courses){
+
+if(category==="all" ||
+course.classList.contains(category)){
+
+course.classList.remove("hide");
+
+}
+else{
+
+course.classList.add("hide");
+
+}
+
+}
+}
+
+function enroll(course){
+
+let choice=confirm(
+"Do you want to enroll in " + course + "?"
+);
+
+if(choice){
+
+alert(
+"You selected " + course +
+". Please register to continue."
+);
+
+window.location.href="register.html";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
+

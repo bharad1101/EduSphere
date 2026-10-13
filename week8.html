@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Week 8 - Fetch API</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f8ff;
+margin:0;
+}
+
+.container{
+max-width:700px;
+margin:60px auto;
+padding:35px;
+background:white;
+border-radius:12px;
+box-shadow:0 4px 15px #0002;
+text-align:center;
+}
+
+#output{
+margin-top:25px;
+padding:20px;
+background:#eff6ff;
+border-radius:8px;
+text-align:left;
+white-space:pre-line;
+}
+
+button{
+padding:12px 25px;
+background:#2563eb;
+color:white;
+border:0;
+border-radius:7px;
+font-size:16px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>EduSphere</h1>
+
+<h2>Week 8 - Fetch API</h2>
+
+<p>Load text data asynchronously.</p>
+
+<button onclick="loadText()">
+Load Text Data
+</button>
+
+<div id="output">
+Text data will appear here.
+</div>
+
+</div>
+
+<script>
+
+function loadText(){
+
+fetch("data.txt")
+
+.then(response => {
+
+if(!response.ok){
+throw new Error("Unable to load text file");
+}
+
+return response.text();
+
+})
+
+.then(data => {
+
+document.getElementById("output").textContent=data;
+
+})
+
+.catch(error => {
+
+document.getElementById("output").textContent=
+"Error: " + error.message;
+
+});
+
+}
+
+</script>
+
+</body>
+
+</html>

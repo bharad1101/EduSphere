@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Rahul",
+        "email": "rahul@example.com",
+        "course": "Web Programming"
+    },
+    {
+        "name": "Priya",
+        "email": "priya@example.com",
+        "course": "Python Programming"
+    },
+    {
+        "name": "Arjun",
+        "email": "arjun@example.com",
+        "course": "Artificial Intelligence"
+    }
+]
