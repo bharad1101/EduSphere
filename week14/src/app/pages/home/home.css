@@ -1,0 +1,27 @@
+
+.welcome {
+  max-width: 750px;
+  margin: 20px auto;
+  padding: 25px;
+  background: #f4f8fc;
+  border-radius: 10px;
+}
+
+h2 {
+  color: #1769aa;
+}
+
+li {
+  margin: 10px 0;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: #1769aa;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+

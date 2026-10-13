@@ -1,0 +1,54 @@
+
+form {
+  max-width: 500px;
+  padding: 25px;
+  background: #f4f8fc;
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: bold;
+}
+
+input,
+select {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #b8c8d8;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  color: white;
+  background: #1769aa;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #c0392b;
+  font-size: 13px;
+}
+
+.success {
+  max-width: 500px;
+  margin-top: 20px;
+  padding: 20px;
+  background: #e8f7ed;
+  border-radius: 8px;
+}
+

@@ -1,0 +1,42 @@
+
+:host {
+  display: block;
+  font-family: Arial, sans-serif;
+  color: #243247;
+}
+
+header {
+  background: #1769aa;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  margin-bottom: 5px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  background: #eaf3fb;
+  padding: 15px;
+}
+
+nav a {
+  color: #1769aa;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a.active {
+  color: #d35400;
+  text-decoration: underline;
+}
+
+main {
+  padding: 25px;
+}
+

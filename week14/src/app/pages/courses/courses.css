@@ -1,0 +1,23 @@
+
+h2 {
+  color: #1769aa;
+}
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.course-card {
+  flex: 1 1 220px;
+  padding: 20px;
+  background: #f4f8fc;
+  border: 1px solid #d5e4f2;
+  border-radius: 8px;
+}
+
+.course-card h3 {
+  color: #1769aa;
+}
+

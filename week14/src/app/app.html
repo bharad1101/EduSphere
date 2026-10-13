@@ -1,0 +1,19 @@
+
+<header>
+  <h1>EduSphere</h1>
+  <p>Your Online Learning Platform</p>
+</header>
+
+<nav>
+  <a routerLink="/" routerLinkActive="active"
+     [routerLinkActiveOptions]="{ exact: true }">Home</a>
+
+  <a routerLink="/courses" routerLinkActive="active">Courses</a>
+
+  <a routerLink="/register" routerLinkActive="active">Register</a>
+</nav>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+

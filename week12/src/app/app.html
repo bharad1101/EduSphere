@@ -1,0 +1,60 @@
+<h1>Week 12 - Angular Components and Data Binding</h1>
+
+<h2>{{ title }}</h2>
+
+<p><strong>Student Name:</strong> {{ studentName }}</p>
+
+<p><strong>Selected Course:</strong> {{ course }}</p>
+
+<hr>
+
+<h3>1. Interpolation</h3>
+
+<p>
+  Hello {{ studentName }}! You are learning {{ course }}.
+</p>
+
+<hr>
+
+<h3>2. Property Binding</h3>
+
+<button [disabled]="!showCourse">
+  Course Button
+</button>
+
+<p>
+  The button is disabled when the course is hidden.
+</p>
+
+<hr>
+
+<h3>3. Event Binding</h3>
+
+<button (click)="displayMessage()">
+  Show Welcome Message
+</button>
+
+<p>{{ message }}</p>
+
+<hr>
+
+<h3>4. Two-Way Data Binding</h3>
+
+<label>Enter your name: </label>
+
+<input [(ngModel)]="studentName" placeholder="Enter name">
+
+<p>Your name is: {{ studentName }}</p>
+
+<hr>
+
+<h3>5. Show / Hide Course</h3>
+
+<button (click)="toggleCourse()">
+  Show / Hide Course
+</button>
+
+<div *ngIf="showCourse">
+  <p>Course: {{ course }}</p>
+  <p>Learn with EduSphere!</p>
+</div>
